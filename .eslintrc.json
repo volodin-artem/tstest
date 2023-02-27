@@ -5,8 +5,10 @@
   },
   "extends": [
     "plugin:react/recommended",
-    "airbnb"
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "overrides": [
   ],
   "parserOptions": {
@@ -14,13 +16,14 @@
     "sourceType": "module"
   },
   "plugins": [
-    "react"
+    "react",
+    "@typescript-eslint"
   ],
   "rules": {
     "linebreak-style": "off",
     "quotes": "off",
     "prefer-template": "off",
-    "import/extensions" : "off",
+    "import/extensions": "off",
     "no-useless-concat": "off",
     "react/prop-types": "off",
     "react/destructuring-assignment": "off"
