@@ -6,7 +6,7 @@
   "scripts": {
     "buld": "webpack",
     "server": "nodemon app.js",
-    "dev": "concurrently \"webpack serve --mode development\" \"npm run server\""
+    "dev": "webpack serve --mode development"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
