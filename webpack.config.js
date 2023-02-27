@@ -44,10 +44,12 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
+        include: path.resolve(__dirname, 'src'),
         use: [
           "style-loader",
           "css-loader",
           "sass-loader",
+          "postcss-loader",
         ],
       },
     ],
