@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   devtool: 'eval-source-map',
   mode: "development",
-  entry: "./src/index.jsx",
+  entry: "./src/index.tsx",
   output: {
     path: path.join(__dirname, '/public'),
     filename: "bundle.js",
@@ -29,6 +29,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /(node_modules)/,
+      },
+      {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
         loader: "babel-loader",
@@ -46,5 +51,8 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };
